@@ -1,3 +1,4 @@
+```jsx
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
@@ -53,16 +54,18 @@ export default function Home() {
       </Head>
 
       <section className={utilStyles.headingMd}>
-        <h2 className={utilStyles.headingXl}>10 Things That Require Zero Talent</h2>
+        <h2 className={utilStyles.headingXl}>
+          10 Things That Require Zero Talent
+        </h2>
 
-        <ol>
+        <ul>
           {things.map((thing) => (
             <li key={thing.title} className={utilStyles.listItem}>
               <strong>{thing.title}</strong>
               <p>{thing.text}</p>
             </li>
           ))}
-        </ol>
+        </ul>
 
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
@@ -72,3 +75,4 @@ export default function Home() {
     </Layout>
   );
 }
+```
